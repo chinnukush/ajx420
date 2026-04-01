@@ -469,7 +469,7 @@ async def old_get_movie_details(query, id=False, file=None):
     except Exception as e:
         logger.exception(f"An error occurred in get_movie_details: {e}")
         return None
-"""
+
 
 async def get_movie_detailsx(query, id=False, file=None):
     """
