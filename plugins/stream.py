@@ -31,9 +31,9 @@ async def stream_start(client, message):
             file_id=fileid,
         )
         fileName = {quote_plus(get_name(log_msg))}
-        stream = f"{URL}watch/{str(log_msg.id)}?hash={get_hash(log_msg)}"
-        download = f"{URL}{str(log_msg.id)}?hash={get_hash(log_msg)}"
-
+            dreamx_stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+            dreamx_download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+        
         await log_msg.reply_text(
             text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
             quote=True,
@@ -42,9 +42,9 @@ async def stream_start(client, message):
                 [
                     [
                         InlineKeyboardButton(
-                            "🚀 Fast Download 🚀", url=download
+                            "🚀 Fast Download 🚀", url=dreamx_download
                         ),  # we download Link
-                        InlineKeyboardButton("🖥️ Watch online 🖥️", url=stream),
+                        InlineKeyboardButton("🖥️ Watch online 🖥️", url=dreamx_stream),
                     ]
                 ]
             ),  # web stream Link
@@ -52,8 +52,8 @@ async def stream_start(client, message):
         rm = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("sᴛʀᴇᴀᴍ 🖥", url=stream),
-                    InlineKeyboardButton("ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=download),
+                    InlineKeyboardButton("sᴛʀᴇᴀᴍ 🖥", url=dreamx_stream),
+                    InlineKeyboardButton("ᴅᴏᴡɴʟᴏᴀᴅ 📥", url=dreamx_download),
                 ]
             ]
         )
