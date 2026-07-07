@@ -5,8 +5,8 @@ from pyrogram.types import (
 )
 from info import URL, LOG_CHANNEL
 from urllib.parse import quote_plus
-from Jisshu.util.file_properties import get_name, get_hash, get_media_file_size
-from Jisshu.util.human_readable import humanbytes
+from dreamxbotz.util.file_properties import get_name, get_hash, get_media_file_size
+from dreamxbotz.util.human_readable import humanbytes
 import humanize
 
 
@@ -30,9 +30,9 @@ async def stream_start(client, message):
             chat_id=LOG_CHANNEL,
             file_id=fileid,
         )
-        fileName = {quote_plus(get_name(log_msg))}
-            dreamx_stream = f"{URL}watch/{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
-            dreamx_download = f"{URL}{str(log_msg.id)}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+        fileName = quote_plus(get_name(log_msg))
+        dreamx_stream = f"{URL}watch/{log_msg.id}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
+        dreamx_download = f"{URL}{log_msg.id}/{quote_plus(get_name(log_msg))}?hash={get_hash(log_msg)}"
         
         await log_msg.reply_text(
             text=f"•• ʟɪɴᴋ ɢᴇɴᴇʀᴀᴛᴇᴅ ꜰᴏʀ ɪᴅ #{user_id} \n•• ᴜꜱᴇʀɴᴀᴍᴇ : {username} \n\n•• ᖴᎥᒪᗴ Nᗩᗰᗴ : {fileName}",
@@ -63,8 +63,8 @@ async def stream_start(client, message):
             text=msg_text.format(
                 get_name(log_msg),
                 humanbytes(get_media_file_size(msg)),
-                download,
-                stream,
+                dreamx_download,
+                dreamx_stream,
             ),
             quote=True,
             disable_web_page_preview=True,
