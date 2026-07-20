@@ -52,7 +52,7 @@ PREMIUM_LOGS = int(environ.get('PREMIUM_LOGS', '-1004409978272'))  # Premium log
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '-1002119063158').split()] #(make sure bot is admin)
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1001629003283')  # Support group id (make sure bot is admin)
 reqst_channel = environ.get('REQST_CHANNEL_ID', '-1004409978272')  # Request channel id (make sure bot is admin)
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/TG_SUPPORT_GROUP')  # Support group link (make sure bot is admin)
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/AJK_BOY1_OFFICIAL')  # Support group link (make sure bot is admin)
 
 # FORCE_SUB 
 auth_req_channels = environ.get("AUTH_REQ_CHANNELS", "-1003779844470")# requst to join Channel for force sub (make sure bot is admin) only for bot ADMINS  
@@ -124,9 +124,9 @@ THREE_VERIFY_GAP = int(environ.get('THREE_VERIFY_GAP', "1220"))
 # ============================
 # Channel & Group Links Configuration
 # ============================
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/iPopcornMoviesGroups') # Group link for the bot
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Harikushal') # Owner link for the bot
-UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/+9YIHvEuJONc5MDBl') # Update channel link for the bot
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/AJKBOY') # Group link for the bot
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/AJK_BOY1_OFFICIAL') # Owner link for the bot
+UPDATE_CHNL_LNK = environ.get('UPDATE_CHNL_LNK', 'https://t.me/AJKBOY') # Update channel link for the bot
 
 # ============================
 # User Configuration
