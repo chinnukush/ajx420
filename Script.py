@@ -213,7 +213,7 @@ Nᴀᴍᴇ : {}
 
 Mᴇꜱꜱᴀɢᴇ : <b>{}</b>"""
     
-    CAPTION = """<b>{file_name}/b>\n\n<b>⚜️ Powered By : <a href="https://t.me/AJKBOY_Officialx">[ Iser ]</a></b>"""
+    CAPTION = """<b>{file_name}/b>\n\n<b>⚜️ Powered By : <a href="https://t.me/AJKBOY_Officialx">[ AJK-BOY ]</a></b>"""
 
     
     MOVIE_UPDATE_NOTIFY_TXT = """
